@@ -14,11 +14,7 @@ for i, k in zip(numbers[0::2], numbers[1::2]):
             p2 += int(s)
             continue
 
-        for j in range(1, s_len // 2 + 1):
-            if s_len % j == 0:
-                chunks = [s[i:i + j] for i in range(0, s_len, j)]
-                if all(x == chunks[0] for x in chunks):
-                    p2 += int(s)
-                    break
+        if s in (s + s)[1:-1]:
+            p2 += int(s)
 
 print(p1, p2)

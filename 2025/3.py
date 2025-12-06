@@ -15,9 +15,7 @@ def find_max(number, n):
             drop -= 1
         stack.append(d)
 
-    stack = stack[:n]
-
-    return int("".join(stack))
+    return int("".join(stack[:n]))
 
 
 p1 = 0

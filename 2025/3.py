@@ -18,11 +18,7 @@ def find_max(number, n):
     return int("".join(stack[:n]))
 
 
-p1 = 0
-p2 = 0
-
-for line in lines:
-    p1 += find_max(line, 2)
-    p2 += find_max(line, 12)
+p1 = sum(find_max(line, 2) for line in lines)
+p2 = sum(find_max(line, 12) for line in lines)
 
 print(p1, p2)
